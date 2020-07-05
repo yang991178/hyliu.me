@@ -17,10 +17,12 @@ export default [
 declare global {
     type Project = {
         slug: string;
-        icon?: string;
         title: string;
         slogan: string;
-        screenshot?: string;
+        stack?: string[];
+        links?: [string, string][];
+        wide?: boolean;
+        screenshot?: boolean;
         themeColor?: string;
         textColor?: string;
     }

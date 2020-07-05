@@ -2,5 +2,9 @@
     "slug": "bookstand",
     "title": "The Bookstand",
     "slogan": "Sell books with a scan",
+    "stack": ["ASP.NET", "C#", "jQuery", "Bootstrap"],
+    "links": [
+        ["Website", "https://nya-books.azurewebsites.net/"]
+    ],
     "textColor": "#1897b8"
 }

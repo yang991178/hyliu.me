@@ -1,7 +1,13 @@
 {
     "slug": "nirvana-news",
     "title": "Nirvana News",
-    "slogan": "High School News Agency",
+    "slogan": "High school news agency",
+    "stack": ["php", "jQuery", "Vue", "UWP"],
+    "links": [
+        ["Website", "https://nirvana.news/"],
+        ["Microsoft Store", "https://www.microsoft.com/store/apps/9n5pmnr80v7w"]
+    ],
+    "screenshot": true,
     "themeColor": "#4f83bf",
     "textColor": "#fff"
 }

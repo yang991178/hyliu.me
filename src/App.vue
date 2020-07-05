@@ -9,6 +9,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+html.detail-on {
+    overflow: hidden;
+}
 @media (max-width: 700px) {
     html {
         font-size: 11px;
@@ -62,7 +65,8 @@ header .links {
             <h2>I build software for an open web.</h2>
             <link-group :links="links" />
         </header>
-        <project-list />
+        <project-list @detail="onDetail" />
+        <project-detail @dismiss="onDismiss" :project="detail" v-if="detail" />
     </div>
 </template>
 
@@ -70,19 +74,21 @@ header .links {
 import { defineComponent, ref, onMounted, onUnmounted } from 'vue'
 import LinkGroup from '@/components/LinkGroup.vue'
 import ProjectList from '@/components/ProjectList.vue'
+import ProjectDetail from '@/components/ProjectDetail.vue'
 
 export default defineComponent({
     props: {},
     components: {
-        LinkGroup, ProjectList
+        LinkGroup, ProjectList, ProjectDetail
     },
     setup() {
         const fixed = ref(false)
         const app = ref<HTMLElement>()
+        const detail = ref<Project>()
 
         const onResize = () => {
             const root = app.value as HTMLElement
-            document.body.style.marginTop = `${root.clientHeight}px`
+            document.body.style.paddingTop = `${root.clientHeight}px`
         }
 
         const onScroll = () => {
@@ -105,11 +111,22 @@ export default defineComponent({
         return {
             fixed: fixed,
             app: app,
+            detail: detail,
             links: [
                 ['GitHub', 'https://github.com/yang991178'],
                 ['Resume', 'https://github.com/yang991178'],
             ],
         }
+    },
+    methods: {
+        onDetail(project: Project) {
+            this.detail = project
+            document.documentElement.classList.add('detail-on')
+        },
+        onDismiss() {
+            this.detail = undefined
+            document.documentElement.classList.remove('detail-on')
+        },
     }
 })
 </script>

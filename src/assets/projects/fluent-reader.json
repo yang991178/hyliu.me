@@ -1,8 +1,14 @@
 {
     "slug": "fluent-reader",
     "title": "Fluent Reader",
-    "slogan": "Modern Desktop RSS Reader",
-    "screenshot": "images/fluent-reader-screenshot.png",
+    "slogan": "Modern desktop RSS reader",
+    "stack": ["Electron", "React", "TypeScript"],
+    "links": [
+        ["Website", "https://hyliu.me/fluent-reader/"],
+        ["GitHub", "https://github.com/yang991178/fluent-reader/"]
+    ],
+    "wide": true,
+    "screenshot": true,
     "themeColor": "#046FC3",
     "textColor": "#fff"
 }

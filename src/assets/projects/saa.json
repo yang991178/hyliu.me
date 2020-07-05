@@ -2,6 +2,11 @@
     "slug": "saa",
     "title": "SAA",
     "slogan": "Student Activity Association",
+    "stack": ["Full-Stack Web"],
+    "links": [
+        ["Website", "https://xuehuo.shenzhong.net/"],
+        ["GitHub", "https://github.com/Xuehuo"]
+    ],
     "themeColor": "#f05938",
     "textColor": "#fff"
 }

@@ -11,14 +11,14 @@
                 v-if="i === 0"
                 :text="link[0]"
                 :href="link[1]"
-                :bgColor="themeColor" 
-                :textColor="textColor" 
+                :bgColor="(!themeColor && textColor) ? textColor : themeColor" 
+                :textColor="(!themeColor && textColor) ? '#fff' : textColor" 
                 :key="i" />
             <link-text 
                 v-else
                 :text="link[0]"
                 :href="link[1]"
-                :textColor="themeColor" 
+                :textColor="themeColor || textColor" 
                 :key="i" />
         </template>
     </div>

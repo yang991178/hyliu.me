@@ -54,13 +54,13 @@ p {
 </style>
 
 <template>
-    <div class="project-card" :class="{wide: project.screenshot}" :style="styleObject">
-        <img class="icon" :src="project.icon ? project.icon : `images/${project.slug}-icon.png`" />
+    <div class="project-card" :class="{wide: project.wide}" :style="styleObject">
+        <img class="icon" :src="`images/${project.slug}-icon.png`" />
         <div class="info">
             <h3>{{project.title}}</h3>
             <p>{{project.slogan}}</p>
         </div>
-        <img v-if="project.screenshot" class="screenshot" :src="project.screenshot" />
+        <img v-if="project.wide && project.screenshot" class="screenshot" :src="`images/${project.slug}-screenshot.png`" />
     </div>
 </template>
 

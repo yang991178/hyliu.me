@@ -1,7 +1,11 @@
 {
     "slug": "dailycal",
     "title": "Daily Cal",
-    "slogan": "Berkeley's Newspaper",
+    "slogan": "Berkeley's newspaper",
+    "links": [
+        ["GitHub", "https://github.com/dailycal-projects"],
+        ["Website", "http://dailycal.org/"]
+    ],
     "themeColor": "#4b9acf",
     "textColor": "#fff"
 }

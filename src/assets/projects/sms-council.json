@@ -1,7 +1,13 @@
 {
     "slug": "sms-council",
     "title": "Student Council",
-    "slogan": "Online Voting Platform",
+    "slogan": "Online voting platform",
+    "stack": ["Angular", "TypeScript", "ASP.NET", "C#"],
+    "links": [
+        ["Website", "https://smscouncil.azurewebsites.net/"],
+        ["GitHub", "https://github.com/yang991178/SMS_Council"]
+    ],
+    "screenshot": true,
     "themeColor": "#26a69a",
     "textColor": "#fff"
 }

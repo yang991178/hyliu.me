@@ -15,7 +15,11 @@
 <template>
     <div class="projects" :style="{left: `${-offset}px`}">
         <div class="container" ref="container">
-            <project-card v-for="(project, i) in projects" :project="project" :key="i" />
+            <project-card 
+                v-for="(project, i) in projects" 
+                @click="onDetail(project)"
+                :project="project" 
+                :key="i" />
         </div>
     </div>
 </template>
@@ -36,7 +40,7 @@ export default defineComponent({
         const onResize = () => {
             const c = container.value as HTMLElement
             const p = c.parentElement as HTMLElement
-            document.body.style.marginBottom = `${c.clientWidth - p.clientWidth}px`
+            document.body.style.paddingBottom = `${c.clientWidth - p.clientWidth}px`
         }
 
         const onScroll = () => {
@@ -61,6 +65,13 @@ export default defineComponent({
             container: container,
             projects: projects,
             offset: offset,
+        }
+    },
+    methods: {
+        onDetail(project: Project) {
+            setTimeout(() => {
+                this.$emit('detail', project)
+            }, 75)
         }
     }
 })

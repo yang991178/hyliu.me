@@ -2,7 +2,7 @@
 .link-btn {
     display: inline-block;
     padding: .875rem 1.25rem;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1;
     text-decoration: none;
     color: var(--text-color);
