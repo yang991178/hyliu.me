@@ -27,7 +27,7 @@
 
 .project-card > img.icon {
     display: block;
-    height: 80px;
+    height: 5rem;
     margin: 2.1875rem 1.5rem;
 }
 .project-card > .info {
@@ -74,7 +74,7 @@ export default defineComponent({
     setup(props) {
         const text = (props.project && props.project.textColor) ? props.project.textColor : '#000'
         const bg = (props.project && props.project.themeColor) ? props.project.themeColor : '#fff'
-        const shadow = (props.project && props.project.themeColor) ? (props.project.themeColor + '80') : '#0004'
+        const shadow = (props.project && props.project.themeColor) ? (props.project.themeColor + '80') : '#0003'
         return {
             styleObject: {
                 '--text-color': text,

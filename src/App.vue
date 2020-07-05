@@ -9,6 +9,12 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+@media (max-width: 700px) {
+    html {
+        font-size: 11px;
+    }
+}
+
 #root {
     overflow: hidden;
     position: absolute;
@@ -23,7 +29,7 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     height: 100vh;
@@ -54,9 +60,7 @@ header .links {
             <h1>Hello there.</h1>
             <h2>I'm Haoyuan Liu, <br />a junior at UC Berkeley.</h2>
             <h2>I build software for an open web.</h2>
-            <div class="links">
-                <link-button text="GitHub" href="https://github.com/yang991178" />
-            </div>
+            <link-group :links="links" />
         </header>
         <project-list />
     </div>
@@ -64,15 +68,15 @@ header .links {
 
 <script lang="ts">
 import { defineComponent, ref, onMounted, onUnmounted } from 'vue'
-import LinkButton from '@/components/LinkButton.vue'
+import LinkGroup from '@/components/LinkGroup.vue'
 import ProjectList from '@/components/ProjectList.vue'
 
 export default defineComponent({
     props: {},
     components: {
-        LinkButton, ProjectList
+        LinkGroup, ProjectList
     },
-    setup(props) {
+    setup() {
         const fixed = ref(false)
         const app = ref<HTMLElement>()
 
@@ -101,6 +105,10 @@ export default defineComponent({
         return {
             fixed: fixed,
             app: app,
+            links: [
+                ['GitHub', 'https://github.com/yang991178'],
+                ['Resume', 'https://github.com/yang991178'],
+            ],
         }
     }
 })

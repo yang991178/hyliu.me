@@ -8,7 +8,7 @@
     color: var(--text-color);
     width: auto;
     background: var(--bg-color);
-    transition: all .075s ease-in;
+    transition: transform .075s ease-in, box-shadow .075s ease-in;
 }
 .link-btn:hover {
     transform: translateY(-.25rem);

@@ -1,5 +1,6 @@
 <style scoped>
 .projects {
+    width: 90%;
     max-width: 1200px;
     height: 18.75rem;
     margin: -1rem auto 4rem;
@@ -20,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, unref, onUnmounted } from 'vue'
+import { defineComponent, ref, onMounted, onUnmounted } from 'vue'
 import ProjectCard from './ProjectCard.vue'
 import projects from "@/assets/projects"
 
@@ -28,7 +29,7 @@ export default defineComponent({
     components: {
         ProjectCard
     },
-    setup(props, {attrs}) {
+    setup() {
         const container = ref<HTMLElement>()
         const offset = ref(0)
 
@@ -39,7 +40,6 @@ export default defineComponent({
         }
 
         const onScroll = () => {
-            const c = container.value as HTMLElement
             const root = document.getElementById("root") as HTMLElement
             const scrollHeight = window.scrollY + window.innerHeight
             const overflowHeight = scrollHeight - root.clientHeight
