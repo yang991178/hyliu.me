@@ -31,9 +31,9 @@ jobs:
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2.1.0
       env:
-        GITHUB_TOKEN: ${{ secrets.deploy_key }}
+        GH_PAT: ${{ secrets.GH_ACCESS_TOKEN }}
       with:
         # GitHub repository where assets will be deployed (default current)
-        repo: yang991178.github.io
+        repo: yang991178/yang991178.github.io
         target_branch: master
         build_dir: dist
