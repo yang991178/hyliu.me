@@ -30,6 +30,8 @@ jobs:
 
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2.1.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.deploy_key }}
       with:
         # GitHub repository where assets will be deployed (default current)
         repo: yang991178.github.io
