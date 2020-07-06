@@ -1,4 +1,6 @@
-# hyliu.me-2.0
+# hyliu.me
+
+A minimalistic portfolio site for personal projects developed with Vue composition API with CI/CD to GitHub Pages. 
 
 ## Project setup
 ```

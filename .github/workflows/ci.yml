@@ -29,11 +29,9 @@ jobs:
         npm run build
 
     - name: GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v2.1.0
-      env:
-        GH_PAT: ${{ secrets.GH_ACCESS_TOKEN }}
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        # GitHub repository where assets will be deployed (default current)
-        repo: yang991178/yang991178.github.io
-        target_branch: master
-        build_dir: dist
+        personal_token: ${{ secrets.GH_ACCESS_TOKEN }}
+        external_repository: yang991178/yang991178.github.io
+        publish_branch: master
+        publish_dir: ./dist
