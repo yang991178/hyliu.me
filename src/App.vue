@@ -114,7 +114,7 @@ export default defineComponent({
             detail: detail,
             links: [
                 ['GitHub', 'https://github.com/yang991178'],
-                ['Resume', 'https://github.com/yang991178'],
+                ['Resume', '/resume.pdf'],
             ],
         }
     },

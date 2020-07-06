@@ -3,7 +3,7 @@
     width: 90%;
     max-width: 1200px;
     height: 18.75rem;
-    margin: -1rem auto 4rem;
+    margin: -1rem auto calc(50vh - 9.375rem);
     overflow: visible;
     position: relative;
 }
