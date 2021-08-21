@@ -61,7 +61,7 @@ header .links {
     <div id="root" :class="{fixed: fixed}" ref="app">
         <header>
             <h1>Hello there.</h1>
-            <h2>I'm Haoyuan Liu, <br />a junior at UC Berkeley.</h2>
+            <h2>I'm Haoyuan Liu, <br />a senior at UC Berkeley.</h2>
             <h2>I build software for an open web.</h2>
             <link-group :links="links" />
         </header>
