@@ -7,19 +7,19 @@
 <template>
     <div class="links">
         <template v-for="(link, i) in links">
-            <link-button 
+            <link-button
                 v-if="i === 0"
                 :text="link[0]"
                 :href="link[1]"
-                :bgColor="(!themeColor && textColor) ? textColor : themeColor" 
-                :textColor="(!themeColor && textColor) ? '#fff' : textColor" 
-                :key="i" />
-            <link-text 
+                :bgColor="(!themeColor && textColor) ? textColor : themeColor"
+                :textColor="(!themeColor && textColor) ? '#fff' : textColor"
+                :key="'btn-' + i" />
+            <link-text
                 v-else
                 :text="link[0]"
                 :href="link[1]"
-                :textColor="themeColor || textColor" 
-                :key="i" />
+                :textColor="themeColor || textColor"
+                :key="'txt-' + i" />
         </template>
     </div>
 </template>

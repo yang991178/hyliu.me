@@ -96,6 +96,8 @@
 .screenshot {
     display: block;
     width: 100%;
+}
+.screenshot.shadow {
     box-shadow: 0 .25rem 1rem #0003;
 }
 </style>
@@ -116,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="screenshot" v-if="project.screenshot" :src="`images/${project.slug}-screenshot.png`" />
+                <img :class="{screenshot: true, shadow: project.screenshotShadow ?? true}" v-if="project.screenshot" :src="`images/${project.slug}-screenshot.png`" />
                 <link-group 
                     v-if="project.links" 
                     :links="project.links"

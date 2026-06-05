@@ -1,0 +1,14 @@
+{
+    "slug": "fluent-reader-lite",
+    "title": "Fluent Reader Lite",
+    "slogan": "Simplistic mobile RSS client",
+    "stack": ["Flutter"],
+    "links": [
+        ["Website", "https://hyliu.me/fluent-reader-lite/"],
+        ["GitHub", "https://github.com/yang991178/fluent-reader-lite/"]
+    ],
+    "wide": true,
+    "screenshot": true,
+    "screenshotShadow": false,
+    "textColor": "#046FC3"
+}

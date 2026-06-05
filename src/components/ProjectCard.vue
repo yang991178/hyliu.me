@@ -40,6 +40,8 @@
     top: 1.5rem;
     left: 20.25rem;
     height: 15.75rem;
+}
+.project-card > img.screenshot.shadow {
     box-shadow: -3px 0 10px #0004;
 }
 h3, p {
@@ -60,7 +62,7 @@ p {
             <h3>{{project.title}}</h3>
             <p>{{project.slogan}}</p>
         </div>
-        <img v-if="project.wide && project.screenshot" class="screenshot" :src="`images/${project.slug}-screenshot.png`" />
+        <img v-if="project.wide && project.screenshot" :class="{screenshot: true, shadow: project.screenshotShadow ?? true}" :src="`images/${project.slug}-screenshot.png`" />
     </div>
 </template>
 

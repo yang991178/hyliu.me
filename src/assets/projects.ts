@@ -1,4 +1,5 @@
 import fluentReader from './projects/fluent-reader.json'
+import fluentReaderLite from './projects/fluent-reader-lite.json'
 import dailycal from './projects/dailycal.json'
 import nirvanaNews from './projects/nirvana-news.json'
 import smsCouncil from './projects/sms-council.json'
@@ -7,6 +8,7 @@ import saa from './projects/saa.json'
 
 export default [
     fluentReader,
+    fluentReaderLite,
     dailycal,
     nirvanaNews,
     smsCouncil,
@@ -23,6 +25,7 @@ declare global {
         links?: [string, string][];
         wide?: boolean;
         screenshot?: boolean;
+        screenshotShadow?: boolean;
         themeColor?: string;
         textColor?: string;
     }
